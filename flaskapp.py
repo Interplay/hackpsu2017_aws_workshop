@@ -18,8 +18,3 @@ def echo():
 
 if __name__ == "__main__":
 	app.run(debug=True)
-
-# To Do
-# find a way to get html of the pages looking nicer
-# see if i can add css to reposition elements
-# html head equivalents
