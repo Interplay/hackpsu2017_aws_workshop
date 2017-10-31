@@ -23,7 +23,7 @@ time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: xx-large;
+	font-sicard-tabse: xx-large;
 	font: inherit;
 	vertical-align: baseline;
 }
@@ -261,8 +261,8 @@ a:hover {
     bottom: auto,
 	max-height: 350px;
 	position: relative;
-    bottom: 170px;
-    margin-top: 15%;
+    bottom: 10px;
+    margin-top: 10%;
 }
 
 #logo-container {
@@ -1223,12 +1223,12 @@ ul{
 ul li{
     list-style: none;
     display: inline-block;
-    padding: 20px;
+    /*padding: 20px;*/
 }
 
-ul li:hover{
+/*ul li:hover{
     background: #e5704c;
-}
+}*/
 
 ul li a{
     color:#fff;
