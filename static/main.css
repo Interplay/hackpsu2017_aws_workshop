@@ -106,7 +106,7 @@ a:hover {
 
 /*++++++++ COLORS +++++++*/
 .yellow {color:#ffc969;}
-.white {color:white;}
+.white {color:white; max-height: 750px;}
 .blue {color:#84BFF4;}
 .dark-blue {color:#173753;}
 .light-blue {color:#6c88b7;}
