@@ -16,5 +16,8 @@ def echo():
 	createpass=subprocess.Popen('aws iam create-login-profile --user-name ' + str(request.form['text']) + ' --password hackpsu', shell=True)
 	return "User " + str(request.form['text']) +  ' has been created. Your password is: hackpsu <br> Log into the AWS environment at <a href="https://hackpsu.signin.aws.amazon.com/console"> https://hackpsu.signin.aws.amazon.com/console </a>'
 
+#render a confirmation message
+#add arns to iam policies
+
 if __name__ == "__main__":
 	app.run(debug=True)
