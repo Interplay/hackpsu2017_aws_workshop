@@ -134,8 +134,7 @@
 
               <button class="btn waves-effect waves-teal" id="index" data-clipboard-target="#basicindex"><i class="material-icons right">content_copy</i>copy</button>
 
-              <form method="get" action="{{ url_for('static', filename='index.html') }}">
-              <button class="btn waves-effect waves-teal" type="submit">Download</button></form>
+              <a class="waves-effect waves-light btn" href="{{ url_for('static') }}" download="index.html"><i class="material-icons right">send</i>Download</a>
 
       </span></div>
     </li>
