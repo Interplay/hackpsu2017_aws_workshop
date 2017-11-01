@@ -1,16 +1,35 @@
 <html>
  	<head>
  		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
- 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
- 		<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
- 		<link rel="stylesheet" href="../static/materialize.css">
+    <link rel="stylesheet" type="text/css" href="../static/materialize.css">
+    <link rel="stylesheet" type="text/css" href="../static/obsidian.css">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Tangerine">
     <script src="../static/materialize.js"></script>
-		<script src="../static/main.js"></script>
+    <script src="../static/main.js"></script>
+		<script type="text/javascript" src="../static/highlight.pack.js"></script>
  		<link rel="stylesheet" href="../static/main.css"> 
  		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js"></script>
+
+    <script>hljs.initHighlightingOnLoad();</script>
  	</head>
  
+<style type='text/css'>
+pre, code {
+    overflow: hidden;
+    white-space: pre;
+}
+.hljs {
+    padding: 0.5em;
+    padding-right: 100%;
+    background: #002b36;
+    color: #839496;
+    -webkit-text-size-adjust: none;
+}
+</style>
+
+
  	<body>
  		<header>
  			<div class="white">
@@ -38,7 +57,7 @@
       <div>
         <!-- Modal Trigger -->
         <a class="waves-effect waves-light btn modal-trigger" href="#checkin"><i class="material-icons right">send</i>Check In</a>
-        <!-- <a class="waves-effect waves-light btn js-scroll-trigger" href="#awsinfo"><i class="material-icons left">cloud</i>button</a> -->
+        
         <!-- Modal Structure -->
         <div id="checkin" class="modal modal-fixed-footer">
           <div class="modal-content">
@@ -55,27 +74,123 @@
 
     </div>
 
-    <section id="awsinfo">
       <div class="container">
        		   <div class="card small">
           <div class="card-content">
-            <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+            <p class="flow-text">Agenda</p>
           </div>
           <div class="card-tabs">
             <ul class="tabs tabs-fixed-width">
-              <li class="tab"><a href="#test4">Test 1</a></li>
-              <li class="tab"><a class="active" href="#test5">Test 2</a></li>
-              <li class="tab"><a href="#test6">Test 3</a></li>
+              <li class="tab"><a class="active" href="#test4">Part 1: Create index.html</a></li>
+              <li class="tab"><a href="#test5">Part 2: Upload to S3</a></li>
+              <li class="tab"><a href="#test6">Part 3: Create an EC2 Instance</a></li>
             </ul>
           </div>
           <div class="card-content grey lighten-4">
-            <div id="test4">Test 1</div>
+            <div id="test4">
+             
+            </div>
             <div id="test5">Test 2</div>
             <div id="test6">Test 3</div>
           </div>
         </div>
       </div>
- 	  </section>
+ 
+<div class="container">
 
- </body>
- </html>
+  <div class="section">
+    <h5 class="left-align">Code Snippets</h5>
+    <p class="left-align">Stuff</p>
+  </div>
+
+ <ul class="collapsible" data-collapsible="expandable" style="font-size:10px;text-align:left; list-style-position: inside;">
+    <li>
+        <div class="collapsible-header" style="font-size:15px"><i class="material-icons">note_add</i>Example index.html</div>
+        <div class="collapsible-body"><span>
+                <div class="row">
+               <div class="col s9">     
+                <pre style="font-size:15px; text-align: left;">
+                  <code id="basicindex" class="html">
+                  &lt;html&gt;
+                    &lt;head&gt;
+                        &lt;link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine"&gt;
+                        &lt;style&gt; 
+                            body {
+                              font-family:'Tangerine', serif;font-size: 48px;
+                            }
+                          &lt;/style&gt;
+                    &lt;/head&gt;
+                    &lt;body&gt;
+                      &lt;div&gt; Coding in Hacky Valley! &lt;/div&gt;
+                    &lt;/body&gt; 
+                  &lt;/html&gt;
+                  </code>         
+                </pre>
+                </div>
+              </div>
+
+              <blockquote style="font-size:48px;font-family:Tangerine, serif;">
+                Coding in Hacky Valley! 
+              </blockquote>
+
+              <button class="btn waves-effect waves-teal" id="index" data-clipboard-target="#basicindex"><i class="material-icons right">content_copy</i>copy</button>
+
+      </span></div>
+    </li>
+    <li>
+      <div class="collapsible-header" style="font-size:15px"><i class="material-icons">code</i>S3 Bucket Policy</div>
+      <div class="collapsible-body"><span>
+
+            <div class="row">
+              <div class="col s9">     
+              <pre style="font-size:15px; text-align: left;">
+              <code id="bucketpolicy" class="bash">
+                {
+                    "Version": "2012-10-17",
+                    "Statement": [
+                        {
+                            "Sid": "PublicReadForGetBucketObjects",
+                            "Effect": "Allow",
+                            "Principal": "*",
+                            "Action": "s3:GetObject",
+                            "Resource": "arn:aws:s3:::YOUR_BUCKET_NAME/*"
+                        }
+                    ]
+                }
+              </code>         
+            </pre>
+            </div>
+          </div>
+
+        <button class="btn waves-effect waves-teal" id="s3policy" data-clipboard-target="#bucketpolicy"><i class="material-icons right">content_copy</i>copy</button>
+
+      </span></div>
+    </li>
+    <li>
+      <div class="collapsible-header" style="font-size:15px"><i class="material-icons">code</i>EC2 Bootstrap Script</div>
+      <div class="collapsible-body"><span>
+
+            <div class="row">
+              <div class="col s9">     
+              <pre style="font-size:15px; text-align: left;">
+              <code id="ec2" class="shell">
+                  #!/bin/bash
+                  yum update -y
+                  yum install -y httpd24
+                  service httpd start
+                  chkconfig httpd on
+                  aws s3 cp s3://YOUR_BUCKET_NAME /var/www/html/ --recursive
+</code>
+            </pre>
+            </div>
+          </div>
+
+        <button class="btn waves-effect waves-teal" id="ec2policy" data-clipboard-target="#ec2"><i class="material-icons right">content_copy</i>copy</button>
+
+      </span></div>
+    </li>
+  </ul>
+</div>
+
+</body>
+</html>
