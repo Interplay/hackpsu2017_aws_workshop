@@ -1,38 +1,37 @@
 <html>
- 	<head>
- 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="../static/materialize.css">
-    <link rel="stylesheet" type="text/css" href="../static/obsidian.css">
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Tangerine">
-    <script src="../static/materialize.js"></script>
-    <script src="../static/main.js"></script>
-		<script type="text/javascript" src="../static/highlight.pack.js"></script>
- 		<link rel="stylesheet" href="../static/main.css"> 
- 		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js"></script>
+	<head>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Tangerine">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js"></script>
 
-    <script>hljs.initHighlightingOnLoad();</script>
- 	</head>
- 
-<style type='text/css'>
-pre, code {
-    overflow: hidden;
-    white-space: pre;
-}
-.hljs {
-    padding: 0.5em;
-    padding-right: 100%;
-    background: #002b36;
-    color: #839496;
-    -webkit-text-size-adjust: none;
-}
-</style>
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='materialize.css') }}">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='obsidian.css') }}">
+		<script src="{{ url_for('static', filename='materialize.js') }}"></script>
+		<script src="{{ url_for('static', filename='main.js') }}"></script>
+		<script src="{{ url_for('static', filename='highlight.pack.js') }}"></script>
+		<link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script>hljs.initHighlightingOnLoad();</script>
+	</head>
 
+	<style type='text/css'>
+	pre, code {
+	    overflow: hidden;
+	    white-space: pre;
+	}
+	.hljs {
+	    padding: 0.5em;
+	    padding-right: 100%;
+	    background: #002b36;
+	    color: #839496;
+	    -webkit-text-size-adjust: none;
+	}
+	</style>
 
- 	<body>
- 		<header>
- 			<div class="white">
+	<body>
+		<header>
+			<div class="white">
  					<a id="mlh-trust-badge" style="display:block;max-width:100px;min-width:60px;right:50px;top:0;width:10%;" href="https://mlh.io/seasons/na-2018/events?utm_source=na-2018&amp;utm_medium=TrustBadge&amp;utm_campaign=na-2018&amp;utm_content=white" target="_blank"><img src="https://s3.amazonaws.com/logged-assets/trust-badge/2018/white.svg" alt="Major League Hacking 2017 Hackathon Season" style="width:100%">
  					</a>
  					<img id="webbed-hexs2" src="../static/background_hexagon.png">
@@ -135,8 +134,6 @@ pre, code {
 
               <button class="btn waves-effect waves-teal" id="index" data-clipboard-target="#basicindex"><i class="material-icons right">content_copy</i>copy</button>
 
-              
-
       </span></div>
     </li>
     <li>
@@ -193,6 +190,5 @@ pre, code {
     </li>
   </ul>
 </div>
-
-</body>
+	</body>
 </html>
