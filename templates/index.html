@@ -1,12 +1,10 @@
 <html>
 	<head>
-		<script src="{{ jquerycdn }}"></script>
-		<script src="{{ bootstrapjs }}"></script>
-		<script src="{{ bootstrapcss }}" rel="stylesheet"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Tangerine">
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js"></script>
-		
+
 		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='materialize.css') }}">
 		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='obsidian.css') }}">
 		<script src="{{ url_for('static', filename='materialize.js') }}"></script>
@@ -63,7 +61,7 @@
         <div id="checkin" class="modal modal-fixed-footer">
           <div class="modal-content">
               <p style="font-size:25px" class="container">Welcome to the 'Host a website on AWS' workshop!</p>
-              <p style="font-size:20px" class="flow-text">For this workshop, you will be interacting with different services, within the AWS Management Console. Enter in your Penn State User ID (ie: 'abc1234') to create a user and gain to the AWS environment!</p>
+              <p style="font-size:20px" class="flow-text">For this workshop, you will be interacting with different services, within the AWS Management Console. Enter in your Penn State User ID (ie: 'abc1234') to create a user and gain access to the AWS environment!</p>
               <form action="/echo" method="POST"><input name="text" data-length="7" maxlength="7"><button class="btn waves-effect waves-light" type="submit" value="echo">Check-In<i class="material-icons right">send</i></form>
           </div>
           <div class="modal-footer">

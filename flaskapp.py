@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello():
-	return render_template("index.html", jquerycdn='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js', bootstrapjs='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js', bootstrapcss='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css')
+	return render_template("index.html")
 
 @app.route("/echo", methods=['POST'])
 def echo():
