@@ -317,19 +317,20 @@ a:hover {
 	left: -1%;
 }
 
-#webbed-hexs {
-	display: inline-block;
-	position: absolute;
-	right: 0px;	
-	bottom: -5%;
-	overflow: visible;
-	max-width: 250px;
+#webbed-hexs-right {
+	margin-right: 2%;
+    right: 0px;
+    position: absolute;
+	max-width: 30%;
+	top:90px;
 }
 
-#webbed-hexs2 {
-	display: inline-block;
-	float: left;
-	max-width: 250px;
+#webbed-hexs-left {
+	left:0px;
+	top:-2%;
+	position: absolute;
+	margin-left: 2%;
+	max-width: 30%;
 }
 
 #aboutsection{
