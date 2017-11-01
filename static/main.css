@@ -343,7 +343,7 @@ a:hover {
 
 @media screen and (max-width: 768px){
 	#hackpsu-logo {
-		width: 55%;
+		/*width: 55%;*/
 		max-height: 300px;
 		margin: auto;
 		left: 0;
@@ -472,7 +472,7 @@ a:hover {
 	max-width: 750px;
 	/*max-height: 550px ;*/
 	z-index: 500;
-   	width: 100%;
+   	/*width: 100%;*/
     margin-top: -150px;
 }
 
