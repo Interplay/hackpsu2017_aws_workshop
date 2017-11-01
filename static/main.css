@@ -106,7 +106,7 @@ a:hover {
 
 /*++++++++ COLORS +++++++*/
 .yellow {color:#ffc969;}
-.white {color:white; max-height: 750px;}
+.white {color:white; max-height: 700px;}
 .blue {color:#84BFF4;}
 .dark-blue {color:#173753;}
 .light-blue {color:#6c88b7;}
@@ -322,7 +322,7 @@ a:hover {
     right: 0px;
     position: absolute;
 	max-width: 30%;
-	top:90px;
+	top:30px;
 }
 
 #webbed-hexs-left {
@@ -469,8 +469,8 @@ a:hover {
 	margin: auto;
 	left: 0;
 	right: 0;
-	max-width: 650px;
-	max-height: 550px ;
+	max-width: 750px;
+	/*max-height: 550px ;*/
 	z-index: 500;
    	width: 100%;
     margin-top: -150px;
