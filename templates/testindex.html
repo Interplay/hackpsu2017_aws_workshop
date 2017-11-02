@@ -77,32 +77,37 @@ pre, code {
 
       <div class="container">
         <br />
-       		   <div class="card small">
+       		   <div class="card large">
           <div class="card-content">
-            <p class="flow-text">Agenda</p>
+            <p class="flow-text">Overview</p>
           </div>
           <div class="card-tabs">
             <ul class="tabs tabs-fixed-width">
-              <li class="tab"><a class="active" href="#test4">Part 1: Create index.html</a></li>
-              <li class="tab"><a href="#test5">Part 2: Upload to S3</a></li>
-              <li class="tab"><a href="#test6">Part 3: Create an EC2 Instance</a></li>
+              <li class="tab"><a class="active" href="#whatis">What is AWS?</a></li>
+              <li class="tab"><a class="active" href="#part1">Part 1: Create index.html</a></li>
+              <li class="tab"><a href="#part2">Part 2: Upload to S3</a></li>
+              <li class="tab"><a href="#part3">Part 3: Create an EC2 Instance</a></li>
             </ul>
           </div>
           <div class="card-content grey lighten-4">
-            <div id="test4">
-             
+            <div id="whatis">
+              <p class="flow-text left-align" style="font-size: 20px; float:right">
+                Amazon Web Services (AWS) is a cloud services platform, offering compute power, database storage, content delivery and other functionality that enables high availability, durability and scalability. <img src="https://a0.awsstatic.com/main/images/logos/aws_logo_smile_1200x630.png" style="height:50%;width:20%;float:right"> AWS also strongly emphasizes security, with services that respond to DDoS attacks, provide encryption in transit and at rest, and monitoring for an entire environment. <br /> <br />The two services we will focus on today will be S3 (Simple Storage Service), and EC2 (Elastic Compute Cloud). <br /><br /> S3 is a storage service that can store an umlimited amount of objects that can each range from a size of 0 bytes to 5 terabytes. Objects are stored in 'buckets' which can be configured with various security policies. <br /> EC2 is infrastructure as a service (IaaS) that allows users to create virtual machines to deploy applications, function as a database, or utilized for high-performance computing. 
+              </p>
             </div>
-            <div id="test5">Test 2</div>
-            <div id="test6">Test 3</div>
+            <div id="part1">
+                <p class="flow-text left-align" style="font-size: 20px; float:right">When a web page is served, it has to point to an html file that specifies how the page should look like in this case, we will use it as confirmation that our host is internet facing, being able to be accessed by others <br /><br />Within AWS, it is possible to serve our index.html in multiple ways.   <br /><br /> In this workshop, we will host it on S3 and EC2, highlighting the use cases and differences between both services. </p>                               
+            </div>
+            <div id="part2">Test 2</div>
+            <div id="part3">Test 3</div>
           </div>
         </div>
       </div>
  
-<div class="container">
-
+<div class="container" style="margin-top: 4%;">
+  <br />
   <div class="section">
     <h5 class="left-align">Code Snippets</h5>
-    <p class="left-align">Stuff</p>
   </div>
 
  <ul class="collapsible" data-collapsible="accordion" style="font-size:10px;text-align:left; list-style-position: inside;">
