@@ -99,10 +99,12 @@ pre, code {
                 <p class="flow-text left-align" style="font-size: 20px; float:right">When a web page is served, it has to point to an html file that specifies how the page should look like in this case, we will use it as confirmation that our host is internet facing, being able to be accessed by others <br /><br />Within AWS, it is possible to serve our index.html in multiple ways.   <br /><br /> In this workshop, we will host it on S3 and EC2, highlighting the use cases and differences between both services. </p>                               
             </div>
             <div id="part2">
-              <p class="flow-text left-align" style="font-size: 20px;">Step 1: Create an S3 Bucket <a class="btn-floating btn-small waves-effect waves-light red btn modal-trigger" href="#s3st1" style="margin-left: 10px"><i class="material-icons">image</i></a><br />
-              Step 2: Upload index.html<a class="btn-floating btn-small waves-effect waves-light red btn modal-trigger" href="#s3st2" style="margin-left: 10px"><i class="material-icons">image</i></a><br />
-              Step 3: Edit Bucket Policy<a class="btn-floating btn-small waves-effect waves-light red btn modal-trigger" href="#s3st3" style="margin-left: 10px"><i class="material-icons">image</i></a><br />
-              Step 4: Configure Static Site Hosting<a class="btn-floating btn-small waves-effect waves-light red btn modal-trigger" href="#s3st4" style="margin-left: 10px"><i class="material-icons">image</i></a><br />
+              <p class="flow-text left-align" style="font-size: 20px;">
+              <br />
+              Step 1: Create an S3 Bucket <a class="btn-floating btn-small waves-effect waves-light red btn modal-trigger" href="#s3st1" style="margin-left: 10px"><i class="material-icons">image</i></a><br /><br />
+              Step 2: Upload index.html<a class="btn-floating btn-small waves-effect waves-light red btn modal-trigger" href="#s3st2" style="margin-left: 10px"><i class="material-icons">image</i></a><br /><br />
+              Step 3: Edit Bucket Policy<a class="btn-floating btn-small waves-effect waves-light red btn modal-trigger" href="#s3st3" style="margin-left: 10px"><i class="material-icons">image</i></a><br /><br />
+              Step 4: Configure Static Site Hosting<a class="btn-floating btn-small waves-effect waves-light red btn modal-trigger" href="#s3st4" style="margin-left: 10px"><i class="material-icons">image</i></a><br /><br />
 
               </p>
               <!-- modals in this tab -->
@@ -142,15 +144,15 @@ pre, code {
             </div>
             <div id="part3">
               <p class="flow-text left-align" style="font-size: 20px;">
-                Step 1: Create an Instance<a class="btn-floating btn-small waves-effect waves-light red btn modal-trigger" href="#ec2st1" style="margin-left: 10px"><i class="material-icons">image</i></a><br />
-                Step 2: Select an instance type<a class="btn-floating btn-small waves-effect waves-light red btn modal-trigger" href="#ec2st2" style="margin-left: 10px"><i class="material-icons">image</i></a><br />
-                Step 3: IAM Role and Bootstrap Script<a class="btn-floating btn-small waves-effect waves-light red btn modal-trigger" href="#ec2st3" style="margin-left: 10px"><i class="material-icons">image</i></a><br />
-                Step 4: Add Storage<a class="btn-floating btn-small waves-effect waves-light red btn modal-trigger" href="#ec2st4" style="margin-left: 10px"><i class="material-icons">image</i></a><br /> 
-                Step 5: Add Tags<a class="btn-floating btn-small waves-effect waves-light red btn modal-trigger" href="#ec2st5" style="margin-left: 10px"><i class="material-icons">image</i></a><br />
-                Step 6: Security Groups<a class="btn-floating btn-small waves-effect waves-light red btn modal-trigger" href="#ec2st6" style="margin-left: 10px"><i class="material-icons">image</i></a><br />
-                Step 7: Finish creating EC2 Instance<a class="btn-floating btn-small waves-effect waves-light red btn modal-trigger" href="#ec2st7" style="margin-left: 10px"><i class="material-icons">image</i></a><br />
-                Step 8: Attach Instance to Target Group<a class="btn-floating btn-small waves-effect waves-light red btn modal-trigger" href="#ec2st8" style="margin-left: 10px"><i class="material-icons">image</i></a><br />
-                Step 9: Visit Load Balancer DNS<a class="btn-floating btn-small waves-effect waves-light red btn modal-trigger" href="#ec2st9" style="margin-left: 10px"><i class="material-icons">image</i></a><br />
+                Step 1: Create an Instance<a class="btn-floating btn-small waves-effect waves-light red btn modal-trigger" href="#ec2st1" style="margin-left:10px"><i class="material-icons">image</i></a><br />
+                Step 2: Select an instance type<a class="btn-floating btn-small waves-effect waves-light red btn modal-trigger" href="#ec2st2" style="margin-left:10px;margin-top:10px;"><i class="material-icons">image</i></a><br />
+                Step 3: IAM Role and Bootstrap Script<a class="btn-floating btn-small waves-effect waves-light red btn modal-trigger" href="#ec2st3" style="margin-left:10px;margin-top:10px;"><i class="material-icons">image</i></a><br />
+                Step 4: Add Storage<a class="btn-floating btn-small waves-effect waves-light red btn modal-trigger" href="#ec2st4" style="margin-left:10px;margin-top:10px;"><i class="material-icons">image</i></a><br /> 
+                Step 5: Add Tags<a class="btn-floating btn-small waves-effect waves-light red btn modal-trigger" href="#ec2st5" style="margin-left:10px;margin-top:10px;"><i class="material-icons">image</i></a><br />
+                Step 6: Security Groups<a class="btn-floating btn-small waves-effect waves-light red btn modal-trigger" href="#ec2st6" style="margin-left:10px;margin-top:10px;"><i class="material-icons">image</i></a><br />
+                Step 7: Finish creating EC2 Instance<a class="btn-floating btn-small waves-effect waves-light red btn modal-trigger" href="#ec2st7" style="margin-left:10px;margin-top:10px;"><i class="material-icons">image</i></a><br />
+                Step 8: Attach Instance to Target Group<a class="btn-floating btn-small waves-effect waves-light red btn modal-trigger" href="#ec2st8" style="margin-left:10px;margin-top:10px;"><i class="material-icons">image</i></a><br />
+                Step 9: Visit Load Balancer DNS<a class="btn-floating btn-small waves-effect waves-light red btn modal-trigger" href="#ec2st9" style="margin-left:10px;margin-top:10px;"><i class="material-icons">image</i></a><br />
               </p>
               <!-- modals in this tab -->
               <div id="ec2st1" class="modal">
@@ -224,14 +226,14 @@ pre, code {
                   <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
                 </div>
               </div>
-
+              <!-- modals in this tab -->
 
             </div>
           </div>
         </div>
       </div>
  
-<div class="container" style="margin-top: 4%;">
+<div class="container" style="margin-top: 3%;">
   <br />
   <div class="section">
     <h5 class="left-align">Code Snippets</h5>
