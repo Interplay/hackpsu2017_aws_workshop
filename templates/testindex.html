@@ -84,12 +84,12 @@ pre, code {
           <div class="card-tabs">
             <ul class="tabs tabs-fixed-width">
               <li class="tab"><a class="active" href="#whatis">What is AWS?</a></li>
-              <li class="tab"><a class="active" href="#part1">Part 1: Create index.html</a></li>
+              <li class="tab"><a href="#part1">Part 1: Create index.html</a></li>
               <li class="tab"><a href="#part2">Part 2: Upload to S3</a></li>
               <li class="tab"><a href="#part3">Part 3: Create an EC2 Instance</a></li>
             </ul>
           </div>
-          <div class="card-content grey lighten-4">
+          <div class="card-content grey lighten-4" style="position:relative;">
             <div id="whatis">
               <p class="flow-text left-align" style="font-size: 20px; float:right">
                 Amazon Web Services (AWS) is a cloud services platform, offering compute power, database storage, content delivery and other functionality that enables high availability, durability and scalability. <img src="https://a0.awsstatic.com/main/images/logos/aws_logo_smile_1200x630.png" style="height:50%;width:20%;float:right"> AWS also strongly emphasizes security, with services that respond to DDoS attacks, provide encryption in transit and at rest, and monitoring for an entire environment. <br /> <br />The two services we will focus on today will be S3 (Simple Storage Service), and EC2 (Elastic Compute Cloud). <br /><br /> S3 is a storage service that can store an umlimited amount of objects that can each range from a size of 0 bytes to 5 terabytes. Objects are stored in 'buckets' which can be configured with various security policies. <br /> EC2 is infrastructure as a service (IaaS) that allows users to create virtual machines to deploy applications, function as a database, or utilized for high-performance computing. 
@@ -98,8 +98,135 @@ pre, code {
             <div id="part1">
                 <p class="flow-text left-align" style="font-size: 20px; float:right">When a web page is served, it has to point to an html file that specifies how the page should look like in this case, we will use it as confirmation that our host is internet facing, being able to be accessed by others <br /><br />Within AWS, it is possible to serve our index.html in multiple ways.   <br /><br /> In this workshop, we will host it on S3 and EC2, highlighting the use cases and differences between both services. </p>                               
             </div>
-            <div id="part2">Test 2</div>
-            <div id="part3">Test 3</div>
+            <div id="part2">
+              <p class="flow-text left-align" style="font-size: 20px;">Step 1: Create an S3 Bucket <a class="btn-floating btn-small waves-effect waves-light red btn modal-trigger" href="#s3st1" style="margin-left: 10px"><i class="material-icons">image</i></a><br />
+              Step 2: Upload index.html<a class="btn-floating btn-small waves-effect waves-light red btn modal-trigger" href="#s3st2" style="margin-left: 10px"><i class="material-icons">image</i></a><br />
+              Step 3: Edit Bucket Policy<a class="btn-floating btn-small waves-effect waves-light red btn modal-trigger" href="#s3st3" style="margin-left: 10px"><i class="material-icons">image</i></a><br />
+              Step 4: Configure Static Site Hosting<a class="btn-floating btn-small waves-effect waves-light red btn modal-trigger" href="#s3st4" style="margin-left: 10px"><i class="material-icons">image</i></a><br />
+
+              </p>
+              <!-- modals in this tab -->
+              <div id="s3st1" class="modal">
+                <div class="modal-content">
+                  <img src="../static/createbucket.png">
+                </div>
+                <div class="modal-footer">
+                  <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+                </div>
+              </div>
+              <div id="s3st2" class="modal">
+                <div class="modal-content">
+                  <img src="../static/uploadtos3.png">
+                </div>
+                <div class="modal-footer">
+                  <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+                </div>
+              </div>
+              <div id="s3st3" class="modal">
+                <div class="modal-content">
+                  <img src="../static/bucketpolicy.png">
+                </div>
+                <div class="modal-footer">
+                  <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+                </div>
+              </div>
+              <div id="s3st4" class="modal">
+                <div class="modal-content">
+                  <img src="../static/staticweb.png">
+                </div>
+                <div class="modal-footer">
+                  <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+                </div>
+              </div>
+
+            </div>
+            <div id="part3">
+              <p class="flow-text left-align" style="font-size: 20px;">
+                Step 1: Create an Instance<a class="btn-floating btn-small waves-effect waves-light red btn modal-trigger" href="#ec2st1" style="margin-left: 10px"><i class="material-icons">image</i></a><br />
+                Step 2: Select an instance type<a class="btn-floating btn-small waves-effect waves-light red btn modal-trigger" href="#ec2st2" style="margin-left: 10px"><i class="material-icons">image</i></a><br />
+                Step 3: IAM Role and Bootstrap Script<a class="btn-floating btn-small waves-effect waves-light red btn modal-trigger" href="#ec2st3" style="margin-left: 10px"><i class="material-icons">image</i></a><br />
+                Step 4: Add Storage<a class="btn-floating btn-small waves-effect waves-light red btn modal-trigger" href="#ec2st4" style="margin-left: 10px"><i class="material-icons">image</i></a><br /> 
+                Step 5: Add Tags<a class="btn-floating btn-small waves-effect waves-light red btn modal-trigger" href="#ec2st5" style="margin-left: 10px"><i class="material-icons">image</i></a><br />
+                Step 6: Security Groups<a class="btn-floating btn-small waves-effect waves-light red btn modal-trigger" href="#ec2st6" style="margin-left: 10px"><i class="material-icons">image</i></a><br />
+                Step 7: Finish creating EC2 Instance<a class="btn-floating btn-small waves-effect waves-light red btn modal-trigger" href="#ec2st7" style="margin-left: 10px"><i class="material-icons">image</i></a><br />
+                Step 8: Attach Instance to Target Group<a class="btn-floating btn-small waves-effect waves-light red btn modal-trigger" href="#ec2st8" style="margin-left: 10px"><i class="material-icons">image</i></a><br />
+                Step 9: Visit Load Balancer DNS<a class="btn-floating btn-small waves-effect waves-light red btn modal-trigger" href="#ec2st9" style="margin-left: 10px"><i class="material-icons">image</i></a><br />
+              </p>
+              <!-- modals in this tab -->
+              <div id="ec2st1" class="modal">
+                <div class="modal-content">
+                  <img src="../static/ec2ami.png">
+                </div>
+                <div class="modal-footer">
+                  <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+                </div>
+              </div>
+              <div id="ec2st2" class="modal">
+                <div class="modal-content">
+                  <img src="../static/ec2server.png">
+                </div>
+                <div class="modal-footer">
+                  <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+                </div>
+              </div>
+              <div id="ec2st3" class="modal">
+                <div class="modal-content">
+                  <img src="../static/ec2instancedetails.png">
+                </div>
+                <div class="modal-footer">
+                  <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+                </div>
+              </div>
+              <div id="ec2st4" class="modal">
+                <div class="modal-content">
+                  <img src="../static/ec2addstorage.png">
+                </div>
+                <div class="modal-footer">
+                  <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+                </div>
+              </div><div id="ec2st5" class="modal">
+                <div class="modal-content">
+                  <img src="../static/ec2addtag.png">
+                </div>
+                <div class="modal-footer">
+                  <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+                </div>
+              </div>
+              <div id="ec2st6" class="modal">
+                <div class="modal-content">
+                  <img src="../static/ec2securitygroups.png">
+                </div>
+                <div class="modal-footer">
+                  <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+                </div>
+              </div>
+              <div id="ec2st7" class="modal">
+                <div class="modal-content">
+                  <img src="../static/ec2finalize.png">
+                </div>
+                <div class="modal-footer">
+                  <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+                </div>
+              </div>
+              <div id="ec2st8" class="modal">
+                <div class="modal-content">
+                  <img src="../static/ec2targetgroup.png">
+                </div>
+                <div class="modal-footer">
+                  <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+                </div>
+              </div>
+              <div id="ec2st9" class="modal">
+                <div class="modal-content">
+                  <img src="../static/ec2elb.png">
+                </div>
+                <div class="modal-footer">
+                  <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+                </div>
+              </div>
+
+
+            </div>
           </div>
         </div>
       </div>
